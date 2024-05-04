@@ -11,6 +11,10 @@ export function activate(context: vscode.ExtensionContext) {
 				return;
 			}
 
+			const result: vscode.InlineCompletionList = {
+				items: [],
+			};
+
 			try {
 				const response = await fetch('http://localhost:11434/api/generate', {
 					method: 'POST',
@@ -25,14 +29,13 @@ export function activate(context: vscode.ExtensionContext) {
 				const json = await response.json() as ApiResponse;
 				const AIResponse = json.response;
 
-				const completionItems: vscode.InlineCompletionItem[] = [];
 				const completionRange = new vscode.Range(position, position.translate(0, AIResponse.length));
-				completionItems.push({
+				result.items.push({
 					insertText: AIResponse,
 					range: completionRange
 				});
 
-				return completionItems;
+				return result;
 			} catch (err) {
 				console.error('Error while calling AI API:', err);
 			}
