@@ -13,7 +13,7 @@ export function activate(context: vscode.ExtensionContext) {
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({ 
 						model: "llama3", 
-						prompt: document.getText(),
+						prompt: document.getText(new vscode.Range(new vscode.Position(0, 0), position)),
 						stream: false
 					}),
 				});
