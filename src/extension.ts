@@ -7,6 +7,10 @@ export function activate(context: vscode.ExtensionContext) {
 	const provider = {
         provideInlineCompletionItems: async (document: vscode.TextDocument, position: vscode.Position, context: vscode.InlineCompletionContext, token: vscode.CancellationToken) => {
             
+			if (position.line <= 0) {
+				return;
+			}
+
 			try {
 				const response = await fetch('http://localhost:11434/api/generate', {
 					method: 'POST',
@@ -32,6 +36,8 @@ export function activate(context: vscode.ExtensionContext) {
 			} catch (err) {
 				console.error('Error while calling AI API:', err);
 			}
+
+			return;
         }
     };
 
