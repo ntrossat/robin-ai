@@ -1,10 +1,13 @@
 {
-  "name": "robinai",
+  "name": "robin-ai-lite",
   "displayName": "Robin AI Lite",
   "description": "",
   "author": {
-    "name": "Nicolas"
+    "name": "Nicolas Trossat"
   },
+  "publisher": "Robin AI",
+  "icon": "icon.png",
+  "homepage": "https://github.com/ntrossat/robin-ai-light/README.md",
   "repository": {
     "url": "https://github.com/ntrossat/robin-ai-light"
   },
@@ -21,7 +24,7 @@
   "main": "./out/extension.js",
   "scripts": {
     "vscode:prepublish": "npm run compile",
-    "vscode:package": "vsce package -o extension/RobinAI.vsix",
+    "vscode:package": "vsce package -o RobinAI.vsix",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
