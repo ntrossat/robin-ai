@@ -1,7 +1,13 @@
 {
   "name": "robinai",
-  "displayName": "RobinAI",
+  "displayName": "Robin AI Lite",
   "description": "",
+  "author": {
+    "name": "Nicolas"
+  },
+  "repository": {
+    "url": "https://github.com/ntrossat/robin-ai-light"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.88.0"
@@ -15,7 +21,7 @@
   "main": "./out/extension.js",
   "scripts": {
     "vscode:prepublish": "npm run compile",
-    "vscode:package": "vsce package -o RobinAI.vsix",
+    "vscode:package": "vsce package -o extension/RobinAI.vsix",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
@@ -25,7 +31,7 @@
   "devDependencies": {
     "@types/mocha": "^10.0.6",
     "@types/node": "^18.19.31",
-    "@types/vscode": "^1.89.0",
+    "@types/vscode": "^1.88.0",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
     "@vscode/test-cli": "^0.0.8",
