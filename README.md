@@ -1,6 +1,6 @@
-# Robin AI - Open-Source Code Completion Extension
+# Robin AI - Inline Code Completion Extension
 
-**Robin AI is an Open-Source, AI-driven Code Completion extension for VScode, powered by Ollama and CodeGen.**
+**Robin AI is an Open-Source, AI-driven, Inline Code Completion extension for VScode, powered by Ollama and CodeGen.**
 
 It runs locally on your machine, offering privacy and no need for an internet connection.
 
