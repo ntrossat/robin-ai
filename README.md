@@ -16,11 +16,11 @@ Download and run [Ollama](https://ollama.com/download)
 
 ### 2- Pull codegemma:code model
 
-`bash $ ollama pull codegemma:code`
+`ollama pull codegemma:code`
 
 ### 3 - Test Ollama
 
-`bash $ ollama run codegemma:code`
+`ollama run codegemma:code`
 
 ### 4 - Install Robin AI .vsix Extension
 
@@ -52,4 +52,4 @@ npm install
 
 ### Update VSCode Extension
 
-`bash npm run vscode:package`
+`npm run vscode:package`
