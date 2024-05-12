@@ -5,15 +5,15 @@
   "author": {
     "name": "Nicolas Trossat"
   },
-  "publisher": "Nicolas Trossat",
+  "publisher": "NicolasTrossat",
   "icon": "icon.png",
   "homepage": "https://github.com/ntrossat/robin-ai/README.md",
   "repository": {
     "url": "https://github.com/ntrossat/robin-ai"
   },
-  "version": "0.0.1",
+  "version": "0.0.0",
   "engines": {
-    "vscode": "^1.88.0"
+    "vscode": "^1.89.0"
   },
   "categories": [
     "Data Science",
@@ -28,6 +28,7 @@
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "vscode:package": "vsce package -o RobinAI.vsix",
+    "vscode:publish": "vsce publish",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
@@ -37,7 +38,7 @@
   "devDependencies": {
     "@types/mocha": "^10.0.6",
     "@types/node": "^18.19.31",
-    "@types/vscode": "^1.88.0",
+    "@types/vscode": "^1.89.0",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
     "@vscode/test-cli": "^0.0.8",
