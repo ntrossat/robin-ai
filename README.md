@@ -42,7 +42,7 @@ Robin AI is currently under development, and its capabilities are constantly imp
 
 ## Development Notes
 
-If you're interested in contributing to Robin AI's development, you can clone the project repository and follow the instructions below:
+If you're interested in contributing to Robin AI's development, or tailor the extension to your need, you can clone the project repository and follow the instructions below:
 
 ```bash
 git clone git@github.com:ntrossat/robin-ai.git
