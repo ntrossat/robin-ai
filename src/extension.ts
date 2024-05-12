@@ -53,11 +53,11 @@ export function activate(context: vscode.ExtensionContext) {
 				});
 				const json_response = await response.json() as ApiResponse;
 				const prediction = json_response.response.replace(/\\n/g, "\n");
+				
 
 				// Logging End
 				const endTime = performance.now();
 				console.log('PREDICTION:', prediction);
-				console.log(`PREDICTION time: ${(endTime - startTime)} ms`);
 
 				// Send AI prediction
 				const completionRange = new vscode.Range(position, position.translate(0, prediction.length));
@@ -67,7 +67,7 @@ export function activate(context: vscode.ExtensionContext) {
 				});
 
 			} catch (err) {
-				// Send Error Message
+				// Show Error Message
 				vscode.window.showErrorMessage(`Error while calling Robin AI API: ${err}`);
 			}
 
