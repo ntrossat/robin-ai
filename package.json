@@ -1,11 +1,11 @@
 {
   "name": "robin-ai",
   "displayName": "Robin AI",
-  "description": "",
+  "description": "Robin AI is an Open-Source, AI-driven, Inline Code Completion extension for VScode, powered by Ollama and CodeGen.",
   "author": {
     "name": "Nicolas Trossat"
   },
-  "publisher": "RobinAI",
+  "publisher": "Nicolas Trossat",
   "icon": "icon.png",
   "homepage": "https://github.com/ntrossat/robin-ai/README.md",
   "repository": {
@@ -16,7 +16,10 @@
     "vscode": "^1.88.0"
   },
   "categories": [
-    "Other"
+    "Data Science",
+    "AI",
+    "Programming Languages",
+    "Snippets"
   ],
   "activationEvents": [
     "onStartupFinished"
