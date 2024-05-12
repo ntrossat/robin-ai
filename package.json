@@ -1,15 +1,15 @@
 {
-  "name": "robin-ai-lite",
-  "displayName": "Robin AI Lite",
+  "name": "robin-ai",
+  "displayName": "Robin AI",
   "description": "",
   "author": {
     "name": "Nicolas Trossat"
   },
   "publisher": "Robin AI",
   "icon": "icon.png",
-  "homepage": "https://github.com/ntrossat/robin-ai-light/README.md",
+  "homepage": "https://github.com/ntrossat/robin-ai/README.md",
   "repository": {
-    "url": "https://github.com/ntrossat/robin-ai-light"
+    "url": "https://github.com/ntrossat/robin-ai"
   },
   "version": "0.0.1",
   "engines": {
