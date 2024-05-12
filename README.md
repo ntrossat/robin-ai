@@ -4,7 +4,7 @@
 
 It runs locally on your machine, offering privacy and no need for an internet connection.
 
-![Code Completion Example](src/images/code-completion-example.png)
+![Code Completion Example](https://github.com/ntrossat/robin-ai/blob/a173c309d5dd70d7bfbb338ee84e5e8744e723e4/src/images/code-completion-example.png)
 
 ## Installation
 
@@ -28,7 +28,7 @@ Dowload the latest [Robin AI extension](https://github.com/ntrossat/robin-ai/blo
 
 On VSCode, select the Extensions tab, click on the three dots, and select "Install from VSIX..."
 
-![Install from VSIX](src/images/install-from-vsix.png)
+![Install from VSIX](https://github.com/ntrossat/robin-ai/blob/a173c309d5dd70d7bfbb338ee84e5e8744e723e4/src/images/install-from-vsix.png)
 
 ## Usage
 
