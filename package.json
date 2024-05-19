@@ -20,6 +20,18 @@
     "Programming Languages",
     "Snippets"
   ],
+  "contributes": {
+    "configuration": {
+      "title": "Robin AI Configuration",
+      "properties": {
+        "OllamaApi": {
+          "type": "string",
+          "description": "How can we call Ollama?",
+          "default": "http://localhost:11434/api/generate"
+        }
+      }
+    }
+  },
   "activationEvents": [
     "onStartupFinished"
   ],

@@ -2,20 +2,26 @@ import * as vscode from 'vscode';
 
 type ApiResponse = { response: string };
 
+const DEFAULT_API_URL = "http://localhost:11434/api/generate";
+
 export function activate(context: vscode.ExtensionContext) {
 	const provider = {
         provideInlineCompletionItems: async (document: vscode.TextDocument, position: vscode.Position, context: vscode.InlineCompletionContext, token: vscode.CancellationToken) => {
 
+			const apiUrlSetting: string | undefined = vscode.workspace.getConfiguration().get('robin-ai.OllamaApi');
+
 			// Define empty result
 			const result: vscode.InlineCompletionList = {
 				items: [],
-			};
+			}; 
 
 			// Call Ollama API
 			try {
 				// Logging Start
 				const startTime = performance.now();
-        		console.log('REQUEST');
+        		// console.log('REQUEST');
+
+				// vscode.window.showInformationMessage('REQUEST');
 				
 				// Prompt
 				const prefix = document.getText(
@@ -23,17 +29,17 @@ export function activate(context: vscode.ExtensionContext) {
 						new vscode.Position(0, 0), 
 						position
 					)
-				)
+				);
 				const suffix= document.getText(
 					new vscode.Range(
 						position, 
 						new vscode.Position(document.lineCount, 0)
 					)
-				)
-				const prompt = `<|fim_prefix|>${prefix}<|fim_suffix|>${suffix}<|fim_middle|>`
+				);
+				const prompt = `<|fim_prefix|>${prefix}<|fim_suffix|>${suffix}<|fim_middle|>`;
 
 				// Request
-				const response = await fetch('http://localhost:11434/api/generate', {
+				const response = await fetch(apiUrlSetting!, {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({ 
