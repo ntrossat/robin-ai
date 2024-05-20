@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import ollama from 'ollama';
 
 import { getApiUrl } from './config';
 
@@ -16,6 +17,7 @@ export const inlineCompletionProvider = {
     try {
       // Logging Start
       const startTime = performance.now();				
+
       console.log('REQUEST START');
 
       
@@ -35,34 +37,28 @@ export const inlineCompletionProvider = {
       const prompt = `<|fim_prefix|>${prefix}<|fim_suffix|>${suffix}<|fim_middle|>`;
 
       // Request
-
-      const response = await fetch(getApiUrl(), {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          model: "codegemma:code", 
-          prompt: prompt,
-          options: {
-            "stop": ["\n\n", "<|file_separator|>"],
-            "temperature": 0,
-            "repeat_penalty": 1.2,
-            "num_predict": 1024, 		// Max tokens to generate (256) - default is max length of model + prompt length (1024)
-            "top_k": 20,
-            "top_p": 0.9,
-            "seed": 42,
-          },
-          stream: false
-        })
-      });
-      const json_response = await response.json() as ApiResponse;
-
-      const prediction = json_response.response.replace(/\\n/g, "\n");
       
+      const response = await ollama.generate({ 
+        model: "codegemma:code", 
+        prompt: prompt,
+        options: {
+          "stop": ["\n\n", "<|file_separator|>"],
+          "temperature": 0,
+          "repeat_penalty": 1.2,
+          "num_predict": 1024, 		// Max tokens to generate (256) - default is max length of model + prompt length (1024)
+          "top_k": 20,
+          "top_p": 0.9,
+          "seed": 42,
+        },
+        stream: false
+      });
+      const prediction = response.response;
+      console.log(prediction);
+
       // Logging End
       const endTime = performance.now();
       const completionTime = Math.round((endTime - startTime))/1000;
-      console.log(`PREDICTION: ${prediction}`);
-      console.log(`PREDICTION time: ${completionTime} s`);
+      vscode.window.showInformationMessage(`PREDICTION: ${prediction}`);
       vscode.window.showInformationMessage(`Elapsed time ${completionTime} s`);
 
       // Send AI prediction
