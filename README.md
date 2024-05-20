@@ -34,11 +34,13 @@ On VSCode, select the Extensions tab, click on the three dots, and select "Insta
 
 Just type your code, and Robin AI will propose relevant code completions. Select the desired completion to accept it or hit "Tab".
 
+The context for code completion in VS Code is based on your open files. The more open files you have, the more relevant completion suggestions you'll see. However, having too many open files can slow down the completion process.
+
 Adding comments to your code can improve the accuracy of Robin AI's suggestions, as comments provide additional context about your code's functionality.
 
 ## Limitations
 
-Robin AI is currently under development, and its capabilities are constantly improving. It primarily focuses on the code within the file you're working on and may not always understand the broader project context.
+Robin AI is currently under development, and its capabilities are constantly improving.
 
 ## Development Notes
 
