@@ -8,6 +8,8 @@ export async function activate(context: vscode.ExtensionContext) {
 	// Ingest files on startup
   // await ingestFiles();
 	vscode.window.showInformationMessage('Starting Robin AI...');
+	
+
 	// Send Inline Completion Provider
 	context.subscriptions.push(vscode.languages.registerInlineCompletionItemProvider({ pattern: '**' }, inlineCompletionProvider));
 }

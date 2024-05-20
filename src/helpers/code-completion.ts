@@ -7,6 +7,7 @@ type ApiResponse = { response: string };
 
 export const inlineCompletionProvider = {
   provideInlineCompletionItems: async (document: vscode.TextDocument, position: vscode.Position, context: vscode.InlineCompletionContext, token: vscode.CancellationToken) => {
+    vscode.window.showInformationMessage('Request received...');
 
     // Define empty result
     const result: vscode.InlineCompletionList = {
@@ -16,7 +17,8 @@ export const inlineCompletionProvider = {
     // Call Ollama API
     try {
       // Logging Start
-      const startTime = performance.now();				
+      const startTime = performance.now();			
+      	
 
       console.log('REQUEST START');
 
@@ -24,7 +26,9 @@ export const inlineCompletionProvider = {
       // Prompt
       const prefix = document.getText(
         new vscode.Range(
+
           new vscode.Position(0, 0), 
+
           position
         )
       );
@@ -52,19 +56,19 @@ export const inlineCompletionProvider = {
         },
         stream: false
       });
-      const prediction = response.response;
-      console.log(prediction);
+      const completion = response.response;
+      console.log(completion);
 
       // Logging End
       const endTime = performance.now();
       const completionTime = Math.round((endTime - startTime))/1000;
-      vscode.window.showInformationMessage(`PREDICTION: ${prediction}`);
+      vscode.window.showInformationMessage(`Completion: ${completion}`);
       vscode.window.showInformationMessage(`Elapsed time ${completionTime} s`);
 
-      // Send AI prediction
-      const completionRange = new vscode.Range(position, position.translate(0, prediction.length));
+      // Send AI completion
+      const completionRange = new vscode.Range(position, position.translate(0, completion.length));
       result.items.push({
-        insertText: prediction,
+        insertText: completion,
         range: completionRange
       });
 
