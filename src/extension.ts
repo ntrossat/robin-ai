@@ -1,16 +1,10 @@
 import * as vscode from 'vscode';
-import { ingestFiles } from './helpers/ingestion';
-import { inlineCompletionProvider } from './helpers/code-completion';
+import { inlineCompletionProvider } from './robin-ai/code-completion';
 
 
 export async function activate(context: vscode.ExtensionContext) {
   
-	// Ingest files on startup
-  // await ingestFiles();
-	vscode.window.showInformationMessage('Starting Robin AI...');
-	
-
-	// Send Inline Completion Provider
+	// Send RobinAI Inline Completion Provider
 	context.subscriptions.push(vscode.languages.registerInlineCompletionItemProvider({ pattern: '**' }, inlineCompletionProvider));
 }
 
