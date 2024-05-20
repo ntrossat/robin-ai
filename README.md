@@ -24,7 +24,7 @@ Download and run [Ollama](https://ollama.com/download)
 
 ### 4 - Install Robin AI .vsix Extension
 
-Dowload the latest [Robin AI extension](https://github.com/ntrossat/robin-ai/blob/fb0645c6c54f5edf4fccbca096bc79b46ff77154/RobinAI.vsix) from [Robin AI](https://github/ntrossat/robin-ai) Github Repo.
+Dowload the latest [Robin AI extension](https://github.com/ntrossat/robin-ai/blob/main/robin-ai-0.1.0.vsix) from [Robin AI](https://github/ntrossat/robin-ai) Github Repo.
 
 On VSCode, select the Extensions tab, click on the three dots, and select "Install from VSIX..."
 
