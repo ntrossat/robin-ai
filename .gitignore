@@ -1,3 +1,4 @@
-node_modules
-out
-robin-ai*
+# VScode extension
+node_modules/
+out/
+robin-ai-*.vsix

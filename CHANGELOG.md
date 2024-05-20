@@ -6,4 +6,16 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Initial release
+## [0.1.0] - 2024-05-20
+
+### Added
+
+- Add context from open files.
+- Add Ollama API in configuration.
+
+
+## [0.0.1] - 2024-05-01
+
+### Added
+
+- Initial release by RobinAI.
