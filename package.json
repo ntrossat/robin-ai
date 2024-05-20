@@ -1,5 +1,7 @@
 {
   "name": "robin-ai",
+  "version": "0.0.1",
+  "license": "MIT",
   "displayName": "Robin AI",
   "description": "Robin AI is an Open-Source, AI-driven, Inline Code Completion extension for VScode, powered by Ollama and CodeGen.",
   "author": {
@@ -11,8 +13,6 @@
   "repository": {
     "url": "https://github.com/ntrossat/robin-ai"
   },
-  "version": "0.0.1",
-  "license": "MIT",
   "engines": {
     "vscode": "^1.88.0"
   },
