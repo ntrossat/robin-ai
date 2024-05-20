@@ -34,7 +34,6 @@ export const inlineCompletionProvider = {
 
       // Set prompt
       const prompt = `${context}<|fim_prefix|>${prefix}<|fim_suffix|>${suffix}<|fim_middle|>`;
-      console.log(prompt);
       
       // Request
       const response = await fetch(getApiUrl(), {
