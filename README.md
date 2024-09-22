@@ -40,17 +40,7 @@ Adding comments to your code can improve the accuracy of Robin AI's suggestions,
 
 ## Limitations
 
-Robin AI is currently under development, and its capabilities are constantly improving.
-
-## Development Notes
-
-If you're interested in contributing to Robin AI's development, or tailor the extension to your need, you can clone the project repository and follow the instructions below:
-
-```bash
-git clone git@github.com:ntrossat/robin-ai.git
-cd robin_ai
-npm install
-```
+Robin AI is for educational purposes.
 
 ### Update VSCode Extension
 
